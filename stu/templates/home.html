@@ -1,27 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-</head>
-<body>
+{% include "nav.html" %}
+{% block 'nav' %}
     <h1>hi  home sheet</h1>
-    <p>
-        <table border="1">
-            <tr>
-                <th>Name</th>
-                <th>reg no</th>
-            </tr>
+        <div
+            class="table-responsive"
+        >
+            <table
+                class="table table-primary"
+            >
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">reg no</th>
+                    </tr>
+                </thead>
+                <tbody>
             {% for i in data %}
-            <tr>
-                <td> {{ i.name }}</td>
-                <td> {{ i.regno }} </td>
-            </tr>
-            
+                    <tr class="">
+                        <td> {{ i.id }}</td>
+                        <td> {{ i.name }}</td>
+                        <td> {{ i.regno }} </td>
+                    </tr>
             {% endfor %}
-        </table>
+                </tbody>
+            </table>
+        </div>
+            {% for i in data %}
+        <div class="container">
 
-    </p>
-</body>
-</html>
+        <div
+            class="card text-dark bg-info mb-2"
+        >
+            <div class="card-body">
+                <h4 class="card-title">Name : {{ i.name }}</h4>
+                <p class="card-text">reg no {{ i.regno }} </p>
+            </div>
+        </div>
+        </div>
+
+            {% endfor %}
+        
+        
+{% endblock %}
