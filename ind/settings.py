@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-h1+t-cakh!g91$t3kd38$&k4wc=&hw!^=w3!-ioox)5^^1q^@&
 DEBUG = True
 
 ALLOWED_HOSTS = ["*","https://django-kjf1.onrender.com"]
-
+CSRF_TRUSTED_ORIGINS = ["*"]
 
 # Application definition
 
