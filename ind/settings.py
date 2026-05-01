@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-h1+t-cakh!g91$t3kd38$&k4wc=&hw!^=w3!-ioox)5^^1q^@&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*","https://django-kjf1.onrender.com"]
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'stu',
     'a2',
+    'whitenoise',
 ]
 
 MIDDLEWARE = [
