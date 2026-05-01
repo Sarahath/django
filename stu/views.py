@@ -8,4 +8,8 @@ def home(request):
 def studentDetail(request,pk):
     d = Stu.objects.filter(pk=pk)
     return render(request,"home.html",{"data":d})
-    
+def about(request):
+    return render(request,"about.html")
+
+def contact(request):
+    return render(request,"contact.html")
